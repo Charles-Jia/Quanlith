@@ -469,16 +469,51 @@ body::before {
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
+  overflow: hidden;
   transition: background 0.4s var(--ease);
 }
+/* top accent line wipes in */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 2px;
+  background: var(--black);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s var(--ease);
+}
+/* corner arrow fades in */
+.card::after {
+  content: "\2197";
+  position: absolute;
+  top: clamp(20px, 2.4vw, 32px);
+  right: clamp(20px, 2.4vw, 32px);
+  font-size: 1.05rem;
+  line-height: 1;
+  color: var(--black);
+  opacity: 0;
+  transform: translate(-5px, 5px);
+  transition: opacity 0.4s var(--ease), transform 0.4s var(--ease);
+}
 .card:hover { background: var(--white); }
+.card:hover::before { transform: scaleX(1); }
+.card:hover::after { opacity: 1; transform: none; }
 .card h3 {
   font-size: 1.45rem;
   font-weight: 600;
   letter-spacing: -0.025em;
   margin: 0 0 14px;
+  transition: transform 0.4s var(--ease);
 }
-.card p { color: var(--ink-60); font-size: 0.98rem; line-height: 1.55; }
+.card:hover h3 { transform: translateX(6px); }
+.card p {
+  color: var(--ink-60);
+  font-size: 0.98rem;
+  line-height: 1.55;
+  transition: transform 0.4s var(--ease), color 0.4s var(--ease);
+}
+.card:hover p { transform: translateX(6px); color: var(--black); }
 
 /* ---------- SPLIT ---------- */
 .split {
@@ -507,9 +542,20 @@ body::before {
   color: var(--ink-inv-60);
   padding: 16px 0;
   border-bottom: 1px solid var(--line-inv);
-  transition: color 0.3s var(--ease);
+  position: relative;
+  transition: color 0.3s var(--ease), padding-left 0.3s var(--ease);
 }
-.taglist li:hover { color: var(--white); }
+.taglist li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 50%;
+  width: 0; height: 1px;
+  background: var(--white);
+  transform: translateY(-50%);
+  transition: width 0.3s var(--ease);
+}
+.taglist li:hover { color: var(--white); padding-left: 20px; }
+.taglist li:hover::before { width: 12px; }
 
 /* ---------- TRIAD ---------- */
 .triad {
@@ -538,6 +584,7 @@ body::before {
   color: var(--ink-60);
   font-size: 1rem;
   border-bottom: 1px solid var(--line);
+  transition: color 0.3s var(--ease), padding-left 0.3s var(--ease);
 }
 .ticks li:last-child { border-bottom: none; }
 .ticks li::before {
@@ -547,9 +594,13 @@ body::before {
   width: 9px; height: 9px;
   background: var(--black);
   transform: translateY(-50%) rotate(45deg);
+  transition: transform 0.35s var(--ease);
 }
+.ticks li:hover { color: var(--black); padding-left: 32px; }
+.ticks li:hover::before { transform: translateY(-50%) rotate(135deg) scale(1.25); }
 .ticks--inv li { color: var(--ink-inv-60); border-bottom-color: var(--line-inv); }
 .ticks--inv li::before { background: var(--white); }
+.ticks--inv li:hover { color: var(--white); }
 .ticks--inv { margin-top: 28px; }
 
 /* ---------- ROWS (deployment) ---------- */
@@ -561,15 +612,39 @@ body::before {
   align-items: baseline;
   padding: clamp(26px, 3vw, 40px) 0;
   border-bottom: 1px solid var(--line);
-  transition: padding-left 0.4s var(--ease);
+  position: relative;
+  transition: padding 0.4s var(--ease), background 0.4s var(--ease);
 }
-.row:hover { padding-left: 16px; }
+/* left accent bar grows on hover */
+.row::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 2px;
+  background: var(--black);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.4s var(--ease);
+}
+.row:hover {
+  padding-left: clamp(20px, 2.5vw, 32px);
+  padding-right: clamp(20px, 2.5vw, 32px);
+  background: var(--white);
+}
+.row:hover::before { transform: scaleY(1); }
 .row__h {
   font-size: clamp(1.3rem, 2vw, 1.85rem);
   font-weight: 600;
   letter-spacing: -0.03em;
 }
-.row__p { color: var(--ink-60); font-size: 1rem; line-height: 1.55; max-width: 50ch; }
+.row__p {
+  color: var(--ink-60);
+  font-size: 1rem;
+  line-height: 1.55;
+  max-width: 50ch;
+  transition: color 0.4s var(--ease);
+}
+.row:hover .row__p { color: var(--black); }
 
 /* ---------- SPEC (infrastructure dl) ---------- */
 .spec {
@@ -582,14 +657,34 @@ body::before {
   gap: 32px;
   padding: 24px 0;
   border-bottom: 1px solid var(--line-inv);
+  position: relative;
+  transition: padding-left 0.4s var(--ease);
 }
+.spec__row::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 2px;
+  background: var(--white);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.4s var(--ease);
+}
+.spec__row:hover { padding-left: 16px; }
+.spec__row:hover::before { transform: scaleY(1); }
 .spec__row dt {
   font-size: 1.15rem;
   font-weight: 500;
   letter-spacing: -0.02em;
   color: var(--paper);
 }
-.spec__row dd { color: var(--ink-inv-60); font-size: 1rem; line-height: 1.5; }
+.spec__row dd {
+  color: var(--ink-inv-60);
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: color 0.4s var(--ease);
+}
+.spec__row:hover dd { color: var(--white); }
 
 /* ---------- CHIPS ---------- */
 .chips {
