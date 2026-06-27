@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quanlith — AI Compute Infrastructure for Models and Agents</title>
+  <meta name="description" content="Quanlith provides high-performance GPU compute, inference infrastructure, and dedicated cluster services for model companies, AI agent teams, and enterprise AI applications." />
+  <link rel="icon" type="image/svg+xml" href="assets/quanlith-icon-black.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============== NAV ============== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#top" class="nav__brand" aria-label="Quanlith home">
+        <img src="assets/quanlith-icon-black.svg" alt="" class="nav__mark" />
+        <span class="nav__word">Quanlith</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#workloads">Workloads</a>
+        <a href="#infrastructure">Infrastructure</a>
+        <a href="#deployment">Deployment</a>
+        <a href="#operations">Operations</a>
+      </nav>
+      <a href="mailto:hi@quanlith.com" class="btn btn--sm">Contact</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============== HERO ============== -->
+    <section class="hero" id="hero">
+      <div class="hero__grid">
+        <div class="hero__lead reveal">
+          <p class="eyebrow">AI Compute Infrastructure</p>
+          <h1 class="hero__title">
+            Compute for <em>models</em><br />and <em>agents</em>.
+          </h1>
+          <p class="hero__sub">
+            GPU compute, inference, and dedicated clusters for models, agents,
+            and enterprise AI.
+          </p>
+          <div class="hero__cta">
+            <a href="mailto:hi@quanlith.com" class="btn">Contact Us</a>
+            <a href="#services" class="link-arrow">Explore Services <span>&rsaquo;</span></a>
+          </div>
+        </div>
+
+        <figure class="media media--hero reveal" data-media="video">
+          <div class="media__frame" data-ratio="4/5">
+            <video class="media__vid" src="assets/hero.mp4" autoplay muted loop playsinline preload="auto"></video>
+            <div class="media__placeholder">
+              <span class="media__icon" aria-hidden="true">&#9658;</span>
+              <span class="media__label">Hero Reel</span>
+            </div>
+          </div>        </figure>
+      </div>
+    </section>
+
+    <!-- ============== MARQUEE ============== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>GPU Compute</span><span class="dot">&bull;</span>
+        <span>Inference</span><span class="dot">&bull;</span>
+        <span>Agent Workloads</span><span class="dot">&bull;</span>
+        <span>Dedicated Clusters</span><span class="dot">&bull;</span>
+        <span>Private Deployment</span><span class="dot">&bull;</span>
+        <span>Managed Infrastructure</span><span class="dot">&bull;</span>
+        <span>GPU Compute</span><span class="dot">&bull;</span>
+        <span>Inference</span><span class="dot">&bull;</span>
+        <span>Agent Workloads</span><span class="dot">&bull;</span>
+        <span>Dedicated Clusters</span><span class="dot">&bull;</span>
+        <span>Private Deployment</span><span class="dot">&bull;</span>
+        <span>Managed Infrastructure</span><span class="dot">&bull;</span>
+      </div>
+    </div>
+
+    <!-- ============== SERVICES ============== -->
+    <section class="section" id="services">
+      <header class="section__head reveal">
+        <p class="eyebrow">What We Provide</p>
+        <h2 class="section__title">AI compute services, end&#8209;to&#8209;end.</h2>
+      </header>
+
+      <div class="cards">
+        <article class="card reveal">
+          <h3>GPU Compute</h3>
+          <p>Training, fine-tuning, and inference at scale.</p>
+        </article>
+        <article class="card reveal">
+          <h3>Inference Infrastructure</h3>
+          <p>Language, reasoning, vision, and multimodal models.</p>
+        </article>
+        <article class="card reveal">
+          <h3>Agent Compute</h3>
+          <p>Browser, coding, voice, and multi-agent systems.</p>
+        </article>
+        <article class="card reveal">
+          <h3>Dedicated Clusters</h3>
+          <p>Isolated capacity, predictable performance.</p>
+        </article>
+        <article class="card reveal">
+          <h3>Private Deployment</h3>
+          <p>Secure, isolated environments for internal AI.</p>
+        </article>
+        <article class="card reveal">
+          <h3>Managed Infrastructure</h3>
+          <p>GPUs, monitoring, and operations — fully handled.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============== BUILT FOR AI WORKLOADS ============== -->
+    <section class="section section--dark" id="workloads">
+      <div class="split">
+        <div class="split__text reveal">
+          <p class="eyebrow eyebrow--inv">Built for AI Workloads</p>
+          <h2 class="section__title">
+            From single calls to <em>continuously running systems.</em>
+          </h2>
+          <p class="lede">
+            The infrastructure layer for teams building and scaling modern AI.
+          </p>
+        </div>
+        <figure class="media media--inv reveal" data-media="image">
+          <div class="media__frame" data-ratio="16/9">
+            <video class="media__vid" src="assets/workloads.mp4" autoplay muted loop playsinline preload="metadata"></video>
+            <div class="media__placeholder">
+              <span class="media__icon" aria-hidden="true">&#9658;</span>
+              <span class="media__label">Workloads Loop</span>
+            </div>
+          </div>        </figure>
+      </div>
+
+      <ul class="taglist reveal">
+        <li>LLM inference</li>
+        <li>Reasoning models</li>
+        <li>Training</li>
+        <li>Fine-tuning</li>
+        <li>Long-context</li>
+        <li>Multimodal AI</li>
+        <li>Voice AI</li>
+        <li>Video &amp; image AI</li>
+        <li>Browser agents</li>
+        <li>Coding agents</li>
+        <li>Multi-agent workflows</li>
+        <li>Enterprise automation</li>
+      </ul>
+    </section>
+
+    <!-- ============== MODELS & AGENTS ============== -->
+    <section class="section" id="agents">
+      <header class="section__head reveal">
+        <p class="eyebrow">Compute for Models &amp; Agents</p>
+        <h2 class="section__title">Infrastructure for the new shape of AI.</h2>
+      </header>
+
+      <figure class="media media--wide reveal" data-media="image">
+        <div class="media__frame" data-ratio="21/9">
+          <img class="media__img" src="assets/models.jpg" alt="Exploded view of a GPU compute array" loading="lazy" onerror="this.remove()" />
+          <div class="media__placeholder">
+            <span class="media__icon media__icon--img" aria-hidden="true">&#9707;</span>
+            <span class="media__label">Architecture</span>
+          </div>
+        </div>      </figure>
+
+      <div class="triad">
+        <div class="triad__col reveal">
+          <h3 class="triad__h">For Models</h3>
+          <ul class="ticks">
+            <li>Training &amp; fine-tuning</li>
+            <li>Batch &amp; real-time inference</li>
+            <li>Long-context processing</li>
+            <li>Multimodal inference</li>
+            <li>Private deployment</li>
+          </ul>
+        </div>
+        <div class="triad__col reveal">
+          <h3 class="triad__h">For Agents</h3>
+          <ul class="ticks">
+            <li>Browser &amp; coding agents</li>
+            <li>Voice &amp; multimodal agents</li>
+            <li>Multi-agent systems</li>
+            <li>Workflow agents</li>
+            <li>Long-running reasoning</li>
+          </ul>
+        </div>
+        <div class="triad__col reveal">
+          <h3 class="triad__h">For Enterprises</h3>
+          <ul class="ticks">
+            <li>Internal AI assistants</li>
+            <li>Private knowledge systems</li>
+            <li>Support &amp; ops automation</li>
+            <li>R&amp;D acceleration</li>
+            <li>Secure deployment</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== DEPLOYMENT ============== -->
+    <section class="section section--rule" id="deployment">
+      <header class="section__head reveal">
+        <p class="eyebrow">Deployment Options</p>
+        <h2 class="section__title">Flexible deployment models.</h2>
+      </header>
+
+      <div class="rows">
+        <div class="row reveal">
+          <h3 class="row__h">On-Demand Compute</h3>
+          <p class="row__p">Short-term training, testing, and scaling.</p>
+        </div>
+        <div class="row reveal">
+          <h3 class="row__h">Reserved Capacity</h3>
+          <p class="row__p">Reliable GPU access over a fixed term.</p>
+        </div>
+        <div class="row reveal">
+          <h3 class="row__h">Dedicated GPU Cluster</h3>
+          <p class="row__p">Dedicated infrastructure and predictable performance.</p>
+        </div>
+        <div class="row reveal">
+          <h3 class="row__h">Private AI Deployment</h3>
+          <p class="row__p">Workload isolation and security-sensitive environments.</p>
+        </div>
+        <div class="row reveal">
+          <h3 class="row__h">Managed Infrastructure</h3>
+          <p class="row__p">We handle GPUs, networking, monitoring, and operations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== CINEMATIC MEDIA STRIP ============== -->
+    <figure class="media-band reveal" data-media="image">
+      <div class="media-band__frame">
+        <video class="media__vid" src="assets/brand-film.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <div class="media__placeholder">
+          <span class="media__icon" aria-hidden="true">&#9658;</span>
+          <span class="media__label">Brand Film</span>
+        </div>
+      </div>    </figure>
+
+    <!-- ============== INFRASTRUCTURE ============== -->
+    <section class="section section--dark" id="infrastructure">
+      <div class="split">
+        <div class="split__text reveal">
+          <p class="eyebrow eyebrow--inv">Infrastructure Capabilities</p>
+          <h2 class="section__title">The complete delivery layer.</h2>
+          <p class="lede">
+            Not only GPU capacity — everything required to make compute reliable.
+          </p>
+        </div>
+        <figure class="media media--inv reveal" data-media="image">
+          <div class="media__frame" data-ratio="4/3">
+            <img class="media__img" src="assets/infrastructure.jpg" alt="Bold architectural facade" loading="lazy" onerror="this.remove()" />
+            <div class="media__placeholder">
+              <span class="media__icon media__icon--img" aria-hidden="true">&#9707;</span>
+              <span class="media__label">Data Center</span>
+            </div>
+          </div>        </figure>
+      </div>
+
+      <dl class="spec reveal">
+        <div class="spec__row">
+          <dt>High-Performance GPUs</dt>
+          <dd>For training, fine-tuning, inference, and agents.</dd>
+        </div>
+        <div class="spec__row">
+          <dt>Dedicated Capacity</dt>
+          <dd>Reserved and dedicated clusters for long-term customers.</dd>
+        </div>
+        <div class="spec__row">
+          <dt>Data Center Deployment</dt>
+          <dd>High-density power, cooling, networking, and racks.</dd>
+        </div>
+        <div class="spec__row">
+          <dt>Operational Monitoring</dt>
+          <dd>Monitoring, issue response, and operations.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- ============== WHO WE SERVE ============== -->
+    <section class="section" id="customers">
+      <div class="split">
+        <div class="split__text reveal">
+          <p class="eyebrow">Who We Serve</p>
+          <h2 class="section__title">Built for AI builders.</h2>
+          <ul class="chips">
+            <li>AI model companies</li>
+            <li>Agent startups</li>
+            <li>Enterprise AI teams</li>
+            <li>AI cloud platforms</li>
+            <li>Compute resellers</li>
+            <li>Multimodal teams</li>
+            <li>Voice AI</li>
+            <li>Video &amp; image AI</li>
+            <li>Private deployments</li>
+            <li>International customers</li>
+          </ul>
+        </div>
+        <figure class="media reveal" data-media="image">
+          <div class="media__frame" data-ratio="1/1">
+            <img class="media__img" src="assets/builders.jpg" alt="Detailed AI compute fabric" loading="lazy" onerror="this.remove()" />
+            <div class="media__placeholder">
+              <span class="media__icon media__icon--img" aria-hidden="true">&#9707;</span>
+              <span class="media__label">AI Builders</span>
+            </div>
+          </div>        </figure>
+      </div>
+    </section>
+
+    <!-- ============== WHY QUANLITH ============== -->
+    <section class="section section--rule" id="why">
+      <header class="section__head reveal">
+        <p class="eyebrow">Why Quanlith</p>
+        <h2 class="section__title">Reliable compute for the next generation of AI.</h2>
+      </header>
+
+      <div class="cards cards--why">
+        <article class="card reveal">
+          <h3>Stable Capacity</h3>
+          <p>Built for long-running workloads and inference.</p>
+        </article>
+        <article class="card reveal">
+          <h3>Built for Agents</h3>
+          <p>For continuously running agent systems, not just inference.</p>
+        </article>
+        <article class="card reveal">
+          <h3>Dedicated Clusters</h3>
+          <p>Isolation, stable capacity, and long-term deployment.</p>
+        </article>
+        <article class="card reveal">
+          <h3>Technical Deployment</h3>
+          <p>End-to-end GPU cluster deployment and operations support.</p>
+        </article>
+        <article class="card reveal">
+          <h3>Flexible Models</h3>
+          <p>On-demand, reserved, dedicated, private, and managed.</p>
+        </article>
+        <article class="card reveal">
+          <h3>Enterprise-Grade</h3>
+          <p>For model teams, AI platforms, and high-performance inference.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============== DEPLOYMENT & OPERATIONS ============== -->
+    <section class="section section--dark" id="operations">
+      <div class="split split--reverse">
+        <figure class="media media--inv reveal" data-media="image">
+          <div class="media__frame" data-ratio="1/1">
+            <img class="media__img" src="assets/operations.jpg" alt="Aerial view of a data center facility" loading="lazy" onerror="this.remove()" />
+            <div class="media__placeholder">
+              <span class="media__icon media__icon--img" aria-hidden="true">&#9707;</span>
+              <span class="media__label">Operations</span>
+            </div>
+          </div>        </figure>
+        <div class="split__text reveal">
+          <p class="eyebrow eyebrow--inv">Deployment &amp; Operations</p>
+          <h2 class="section__title">From GPUs to <em>production.</em></h2>
+          <p class="lede">
+            We turn GPU resources into production-ready compute infrastructure.
+          </p>
+          <ul class="ticks ticks--inv">
+            <li>GPU cluster architecture</li>
+            <li>Network &amp; storage planning</li>
+            <li>Bare-metal deployment &amp; provisioning</li>
+            <li>Monitoring &amp; technical operations</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== CONTACT ============== -->
+    <section class="section section--contact" id="contact">
+      <div class="contact reveal">
+        <p class="eyebrow">Contact</p>
+        <h2 class="contact__title">Tell us what you're <em>building.</em></h2>
+        <p class="lede lede--center">
+          Tell us about your workload — we'll match it to the right compute.
+        </p>
+        <a href="mailto:hi@quanlith.com" class="btn btn--lg contact__btn">Contact Us</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="assets/quanlith-icon-white.svg" alt="" class="footer__mark" />
+        <span class="footer__word">Quanlith</span>
+        <p class="footer__tag">AI compute infrastructure for models and agents.</p>
+      </div>
+      <nav class="footer__cols" aria-label="Footer">
+        <div class="footer__col">
+          <h4>Explore</h4>
+          <a href="#services">Services</a>
+          <a href="#workloads">Workloads</a>
+          <a href="#infrastructure">Infrastructure</a>
+          <a href="#deployment">Deployment</a>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <a href="#operations">Operations</a>
+          <a href="#why">Why Quanlith</a>
+          <a href="#customers">Who We Serve</a>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <a href="mailto:hi@quanlith.com">hi@quanlith.com</a>
+        </div>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; 2026 Quanlith. All rights reserved.</span>
+      <span class="footer__loc">quanlith.com</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

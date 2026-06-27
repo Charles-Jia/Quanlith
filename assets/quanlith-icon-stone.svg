@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" fill="none">
+  <defs>
+    <linearGradient id="stone" x1="20" y1="14" x2="104" y2="110" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#56585C"></stop>
+      <stop offset="0.5" stop-color="#2A2B2E"></stop>
+      <stop offset="1" stop-color="#101012"></stop>
+    </linearGradient>
+    <linearGradient id="stoneb" x1="70" y1="70" x2="116" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3A3B3E"></stop>
+      <stop offset="1" stop-color="#0C0C0E"></stop>
+    </linearGradient>
+  </defs>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M32,16 L88,16 L104,32 L104,88 L88,104 L32,104 L16,88 L16,32 Z M47,40 L73,40 L80,47 L80,73 L73,80 L47,80 L40,73 L40,47 Z" fill="url(#stone)"></path>
+  <path d="M82.36,69.64 L116.36,103.64 L103.64,116.36 L69.64,82.36 Z" fill="url(#stoneb)"></path>
+  <path d="M32,16 L88,16 L104,32" stroke="#74767A" stroke-width="0.8" stroke-opacity="0.6" fill="none"></path>
+</svg>
